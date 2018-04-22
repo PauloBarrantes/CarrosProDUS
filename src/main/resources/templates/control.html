@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>DashBoard</title> <!--Cambiar Título -->
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel='stylesheet' href='css/fullcalendar.css' />
+
+</head>
+<body>
+
+    <!-- NavBar -->
+  <nav class=" light-blue accent-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Carros ProDUS</a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Reservaciones</a></li>
+        <li><a href="#">Registrar Control de Uso</a></li>
+        <li><a href="#">Registrar Mantenimiento</a></li>
+
+
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Holis</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+<!-- Body Form -->
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h4 class="header center orange-text">Control de Uso</h4>
+      <div class="row center">
+        <h6 class="header col s12 light">Elija el vehículo que desea registrar el control.</h6>
+      </div>
+        <div> <!-- Datos de la persona que hace el registro-->
+            <div class="select1">
+                <select>
+                  <option value="" disabled selected>Vehículo</option>
+                  <option value="1">Pickup 1</option>
+                  <option value="2">Pickup 2</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+         </div>
+      <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s6"><a  class="active" href="#salida1">Salida</a></li>
+              <li class="tab col s6"><a href="#entrada1">Entrada</a></li>
+
+            </ul>
+          </div>
+
+          <div id="salida1" class="col s12">
+              <label>Hora de Salida</label>
+              <input type="text" class="timepicker2">
+              <label>Combustible de Salida</label>
+              <div class="input-field">
+                   <input placeholder="Combustible" id="combustibleS" type="text" class="validate">
+             </div>
+              <label>Kilometraje de Salida</label>
+              <div class="input-field">
+                   <input placeholder="Kilometraje" id="kilometrajeS" type="text" class="validate">
+
+              </div>
+              <div class="input-field ">
+                  <textarea id="textarea2" class="materialize-textarea"></textarea>
+                 <label for="textarea2">Observaciones</label>
+            </div>
+
+              <button class="btn waves-effect waves-light center" type="submit" name="action">Enviar
+                  <i class="material-icons right">send</i>
+               </button>
+          </div>
+
+          <div id="entrada1" class="col s12">
+                <label>Hora de Entrada</label>
+                <input type="text" class="timepicker1">
+                <label>Combustible de Entrada</label>
+                <div class="input-field">
+                     <input placeholder="Combustible" id="combustibleE" type="text" class="validate">
+               </div>
+                <label>Kilometraje de Entrada</label>
+                <div class="input-field">
+                     <input placeholder="Kilometraje" id="kilometrajeE" type="text" class="validate">
+                </div>
+                <div class="input-field ">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                   <label for="textarea1">Observaciones</label>
+              </div>
+
+                <button class="btn waves-effect waves-light center" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+                 </button>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+ <!-- EndBody -->
+
+
+<!--Footer -->
+
+
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text center">ProDUS</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        Derechos Reservados | 2018
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+      $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+    $(document).ready(function(){
+       $('.timepicker2').timepicker();
+    });
+    $(document).ready(function(){
+       $('.timepicker1').timepicker();
+   });
+
+
+
+  </script>
+
+
+  <script src="js/materialize.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/moment-with-locales.js"></script>
+
+  <script src="js/fullcalendar.min.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
