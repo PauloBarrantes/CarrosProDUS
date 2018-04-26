@@ -1,18 +1,23 @@
 package application.controller;
 
 
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @org.springframework.stereotype.Controller
 public class Controller {
 
     @RequestMapping(value = "/")
-    public String getIndex() {
+    public String getIndex(ModelMap model) {
+        String title = "Inicio";
+        model.addAttribute("title",title);
         return "index";
     }
     @RequestMapping(value="/mantenimiento")
-    public String mantenimiento(){
-
+    public String mantenimiento(ModelMap model){
+        String title = "Mantenimiento";
+        model.addAttribute("title",title);
         return "mantenimiento";
     }
 

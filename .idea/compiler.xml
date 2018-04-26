@@ -9,5 +9,8 @@
         <module name="CarrosProDUS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CarrosProDUS" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

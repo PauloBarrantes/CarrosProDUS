@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head th:include="header.html :: head"></head>
+<body>
+
+<!--Dropdown Structure -->
+
+    <!-- NavBar -->
+    <div th:fragment="navbar">
+        <div class="navbar-fixed" >
+        <nav class=" navbar-color cyan   " role="navigation"  >
+                <div class="nav-wrapper container"><a id="logo-container" href="\" class="brand-logo"><i class="material-icons">cloud</i>SAV | ProDUS</a>
+
+                    <ul class="right hide-on-med-and-down">
+
+                        <li><a href="\mantenimiento"><i class="material-icons ">account_circle</i></a></li>
+                        <li><a href="\reservaciones">Reservaciones</a></li>
+                        <li><a href="\control">Control de Uso</a></li>
+                        <li><a href="\mantenimiento">Mantenimiento</a></li>
+
+
+                    </ul>
+
+                    <ul id="nav-mobile" class="sidenav">
+                        <li><a href="\reservaciones">Reservaciones</a></li>
+                        <li><a href="\control">Registrar Control de Uso</a></li>
+                        <li><a href="\mantenimiento">Registrar Mantenimiento</a></li>
+
+                        </li>
+                    </ul>
+                    <a href="\" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons account_circle">ProDUS</i></a>
+                </div>
+
+        </nav>
+        </div>
+    </div>
+
+<script>
+    var elem = document.querySelector('.sidenav');
+    var instance = M.Sidenav.init(elem, options);
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+
+</script>
+</body>
+</html>

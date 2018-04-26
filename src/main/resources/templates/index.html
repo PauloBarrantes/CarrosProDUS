@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:include="header.html:: head"></div>
+</head>
+<body>
+
+<!-- NavBar -->
+<nav th:include="navbar.html :: navbar" ></nav>
+
+
+<!-- Body Form-->
 
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
@@ -8,7 +21,6 @@
         </div>
 
         <div id="calendar" > </div>
-
         <br>
         <div class="row center">
             <a href="/reservacion" id="download-button" class="btn-large waves-effect waves-light orange">Hacer Reservación</a>
@@ -26,20 +38,14 @@
     $(function() {
 
         $('#calendar').fullCalendar({
-            locale: 'es',
 
             header: {
-                left: 'prev,next today',
+                left: 'prev,next today myCustomButton',
                 center: 'title',
-                right: 'month,agendaWeek,agendaDay,listMonth'
-            },
-            buttonIcons: true, // show the prev/next text
-            weekNumbers: true,
-            navLinks: true, // can click day/week names to navigate views
-            editable: true,
-            eventLimit: true // allow "more" link when too many events
-        });
+                right: 'month,agendaWeek,agendaDay, list'
+            }
 
+        });
 
 
 // when the selected option changes, dynamically change the calendar option
@@ -50,6 +56,7 @@
         });
     });
 </script>
+<div th:include="footer.html :: footer" ></div>
 
 
 </body>

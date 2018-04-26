@@ -1,37 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>DashBoard</title> <!--Cambiar Título -->
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel='stylesheet' href='css/fullcalendar.css' />
-
+    <div th:include="header.html:: head"></div>
 </head>
 <body>
 
-    <!-- NavBar -->
-  <nav class=" light-blue accent-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Carros ProDUS</a>
+<!-- NavBar -->
+<nav th:include="navbar.html :: navbar" ></nav>
 
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Reservaciones</a></li>
-        <li><a href="#">Registrar Control de Uso</a></li>
-        <li><a href="#">Registrar Mantenimiento</a></li>
-
-
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Holis</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
 <!-- Body Form -->
 
   <div class="section no-pad-bot" id="index-banner">
@@ -77,26 +54,8 @@
  <!-- EndBody -->
 
 
-<!--Footer -->
+    <div th:include="footer.html :: footer" ></div>
 
-
-  <footer class="page-footer blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l12 s12">
-          <h5 class="white-text center">ProDUS</h5>
-          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-        </div>
-
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center">
-        Derechos Reservados | 2018
-      </div>
-    </div>
-  </footer>
 
 
   <!--  Scripts-->
@@ -115,12 +74,6 @@
       $('select').formSelect();
       });
   </script>
-  <script src="js/materialize.js"></script>
-  <script src="js/moment.min.js"></script>
-  <script src="js/moment-with-locales.js"></script>
-
-  <script src="js/fullcalendar.min.js"></script>
-  <script src="js/init.js"></script>
 
   </body>
 </html>
