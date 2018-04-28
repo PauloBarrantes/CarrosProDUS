@@ -14,9 +14,9 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h4 class="header center orange-text">Reservación</h4>
+      <h4 class="header center orange-text">Registrar Mantenimiento de un vehículo</h4>
       <div class="row center">
-        <h6 class="header col s12 light">Complete el siguiente formulario para hacer la reservación del vehículo.</h6>
+        <h6 class="header col s12 light">Complete el siguiente formulario para hacer el informe de mantenimiento.</h6>
       </div>
     <div class="formulario">
         <div class="select1">
@@ -28,20 +28,34 @@
             <label>Materialize Select</label>
         </div>
 
-        <label>Fecha de Salida</label>
+        <label>Fecha</label>
         <input type="text" class="datepicker1">
-        <label>Fecha de Entrada</label>
-        <input type="text" class="datepicker2">
 
         <label>
             <input type="checkbox" />
-            <span>Día Completo</span>
+            <span>Cambio de Aceite</span>
         </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Llantas</span>
+        </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Mantenimiento2</span>
+        </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Mantenimiento3</span>
+        </label><br>
+        <div class="input-field ">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Otros</label>
+        </div>
 
     <br>
 
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Reservar</a>
+          <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Enviar</a>
         </div>
         <br><br>
 
@@ -61,18 +75,12 @@
   <!--  Scripts-->
 
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>
     $(document).ready(function(){
       $('.datepicker1').datepicker();
-    });
-    $(document).ready(function(){
-      $('.datepicker2').datepicker();
-    });
+        $('select').formSelect();
 
-      $(document).ready(function(){
-      $('select').formSelect();
-      });
+    });
   </script>
 
   </body>
