@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:include="header.html:: head"></div>
+</head>
+<body>
+
+<!-- NavBar -->
+<nav th:include="navbar.html :: navbar" ></nav>
+
+<!-- Body Form -->
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h4 class="header center orange-text">Registrar Mantenimiento de un vehículo</h4>
+      <div class="row center">
+        <h6 class="header col s12 light">Complete el siguiente formulario para hacer el informe de mantenimiento.</h6>
+      </div>
+    <div class="formulario">
+        <div class="select1">
+            <select>
+              <option value="" disabled selected>Vehículo</option>
+              <option value="1">Pickup 1</option>
+              <option value="2">Pickup 2</option>
+            </select>
+            <label>Materialize Select</label>
+        </div>
+
+        <label>Fecha</label>
+        <input type="text" class="datepicker1">
+
+        <label>
+            <input type="checkbox" />
+            <span>Cambio de Aceite</span>
+        </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Llantas</span>
+        </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Mantenimiento2</span>
+        </label><br>
+        <label>
+            <input type="checkbox" />
+            <span>Mantenimiento3</span>
+        </label><br>
+        <div class="input-field ">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Otros</label>
+        </div>
+
+    <br>
+
+        <div class="row center">
+          <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Enviar</a>
+        </div>
+        <br><br>
+
+    </div>
+
+
+    </div>
+  </div>
+
+ <!-- EndBody -->
+
+
+    <div th:include="footer.html :: footer" ></div>
+
+
+
+  <!--  Scripts-->
+
+
+  <script>
+    $(document).ready(function(){
+      $('.datepicker1').datepicker();
+        $('select').formSelect();
+
+    });
+  </script>
+
+  </body>
+</html>

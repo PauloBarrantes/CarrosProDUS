@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head th:include="head :: head"></head>
+<body>
+
+<div th:fragment="footer" >
+    <footer class="page-footer cyan  ">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <h5 class="white-text center">Programa de Investigación del Desarrollo Urbano Sostenible</h5>
+                    <!--<img class="center" src="../../images/logo.png" th:src="@{/images/logo.png}"/> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright cyan darken-1">
+            <div class="container center">
+                Derechos Reservados | 2018
+            </div>
+        </div>
+    </footer>
+</div>
+<style>
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+</style>
+
+</body>
+</html>

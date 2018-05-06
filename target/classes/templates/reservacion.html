@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:include="header.html:: head"></div>
+</head>
+<body>
+
+<!-- NavBar -->
+<nav th:include="navbar.html :: navbar" ></nav>
+
+<!-- Body Form -->
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h4 class="header center orange-text">Reservación</h4>
+      <div class="row center">
+        <h6 class="header col s12 light">Complete el siguiente formulario para hacer la reservación del vehículo.</h6>
+      </div>
+    <div class="formulario">
+        <div class="select">
+            <select>
+              <option value="" disabled selected>Vehículo</option>
+              <option value="1">Pickup 1</option>
+              <option value="2">Pickup 2</option>
+            </select>
+            <label>Materialize Select</label>
+        </div>
+
+        <label>Fecha de Salida</label>
+        <input type="text" class="datepicker1">
+        <label>Fecha de Entrada</label>
+        <input type="text" class="datepicker2">
+
+        <label>
+            <input type="checkbox" />
+            <span>Día Completo</span>
+        </label><br>
+
+    <br>
+
+        <div class="row center">
+          <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Reservar</a>
+        </div>
+        <br><br>
+
+    </div>
+
+
+    </div>
+  </div>
+
+ <!-- EndBody -->
+
+<div th:include="footer.html :: footer" ></div>
+
+<!--Scripts -->
+
+    <script>
+        $(document).ready(function(){
+            $('.datepicker1').datepicker();
+        });
+        $(document).ready(function(){
+            $('.datepicker2').datepicker();
+        });
+
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
+
+
+  </body>
+</html>
